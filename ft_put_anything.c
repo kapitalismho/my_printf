@@ -6,7 +6,7 @@
 /*   By: salee <salee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 23:10:43 by salee             #+#    #+#             */
-/*   Updated: 2022/01/29 19:44:25 by salee            ###   ########.fr       */
+/*   Updated: 2022/01/29 20:19:53 by salee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_putaddr(unsigned long long addr)
 	int		count;
 
 	if (addr == 0)
-		return ft_putstr("(nil)");
+		return (ft_putstr("(nil)"));
 	count = 0;
 	string = ft_itoa_hexa(addr, 1);
 	count += ft_putstr("0x");

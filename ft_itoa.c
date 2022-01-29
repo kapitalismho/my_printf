@@ -6,7 +6,7 @@
 /*   By: salee <salee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 04:16:31 by salee             #+#    #+#             */
-/*   Updated: 2022/01/29 05:03:50 by salee            ###   ########.fr       */
+/*   Updated: 2022/01/29 20:18:31 by salee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	size_calculator(long long n, int is_negative)
 	return (i);
 }
 
-static char	*number_setter(long long n, int i, int is_negative, char *ret_string)
+static char	*number_setter(long long n, int i, int is_n, char *ret_string)
 {
 	int		digit;
 
@@ -40,12 +40,12 @@ static char	*number_setter(long long n, int i, int is_negative, char *ret_string
 		n = n / 10;
 		i--;
 	}
-	if (is_negative == 1)
+	if (is_n == 1)
 		ret_string[i] = '-';
 	return (ret_string);
 }
 
-char		*ft_itoa(long long n)
+char	*ft_itoa(long long n)
 {
 	int		i;
 	int		is_negative;

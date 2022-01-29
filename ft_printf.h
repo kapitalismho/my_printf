@@ -6,7 +6,7 @@
 /*   By: salee <salee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 06:46:48 by salee             #+#    #+#             */
-/*   Updated: 2022/01/29 19:26:34 by salee            ###   ########.fr       */
+/*   Updated: 2022/01/29 20:19:35 by salee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ char	*ft_itoa_hexa(unsigned long long n, int is_lowcase);
 char	*ft_itoa(long long n);
 
 #endif
-

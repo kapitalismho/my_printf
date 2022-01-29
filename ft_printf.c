@@ -6,7 +6,7 @@
 /*   By: salee <salee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 06:50:42 by salee             #+#    #+#             */
-/*   Updated: 2022/01/29 19:29:36 by salee            ###   ########.fr       */
+/*   Updated: 2022/01/29 20:19:24 by salee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@ int	ft_check_conversion(const char *string, va_list ap)
 
 	c = (char *)string;
 	if (*c == 'c')
-		return ft_putchar(va_arg(ap, int));
+		return (ft_putchar(va_arg(ap, int)));
 	else if (*c == 's')
-		return ft_putstr(va_arg(ap, char *));
+		return (ft_putstr(va_arg(ap, char *)));
 	else if (*c == 'p')
-		return ft_putaddr(va_arg(ap, unsigned long long));
+		return (ft_putaddr(va_arg(ap, unsigned long long)));
 	else if (*c == 'd' || *c == 'i')
-		return ft_putnbr(va_arg(ap, int));
+		return (ft_putnbr(va_arg(ap, int)));
 	else if (*c == 'u')
-		return ft_putnbr(va_arg(ap, unsigned int));
+		return (ft_putnbr(va_arg(ap, unsigned int)));
 	else if (*c == 'x')
-		return ft_puthexa(va_arg(ap, unsigned int), 1);
+		return (ft_puthexa(va_arg(ap, unsigned int), 1));
 	else if (*c == 'X')
-		return ft_puthexa(va_arg(ap, unsigned int), 0);
+		return (ft_puthexa(va_arg(ap, unsigned int), 0));
 	else if (*c == '%')
-		return ft_putchar('%');
+		return (ft_putchar('%'));
 	return (0);
 }
 

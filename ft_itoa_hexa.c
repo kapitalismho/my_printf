@@ -6,7 +6,7 @@
 /*   By: salee <salee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 12:24:16 by salee             #+#    #+#             */
-/*   Updated: 2022/01/29 19:24:14 by salee            ###   ########.fr       */
+/*   Updated: 2022/01/29 20:18:01 by salee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ static int	size_calculator_u(unsigned long long n)
 	return (i);
 }
 
-static char	*number_setter_u(unsigned long long n, int i, int is_lowcase, char *ret)
+static char	*number_setter_u(unsigned long long n, int i, int is_l, char *ret)
 {
 	int		digit;
 	char	*hexa;
-
 
 	hexa = "0123456789abcdef";
 	ret[i] = '\0';
@@ -38,7 +37,7 @@ static char	*number_setter_u(unsigned long long n, int i, int is_lowcase, char *
 	{
 		digit = n % 16;
 		ret[i] = hexa[digit];
-		if (is_lowcase == 0 && 'a' <= ret[i] && ret[i] <= 'z')
+		if (is_l == 0 && 'a' <= ret[i] && ret[i] <= 'z')
 			ret[i] -= 32;
 		n = n / 16;
 		i--;
@@ -46,7 +45,7 @@ static char	*number_setter_u(unsigned long long n, int i, int is_lowcase, char *
 	return (ret);
 }
 
-char		*ft_itoa_hexa(unsigned long long n, int is_lowcase)
+char	*ft_itoa_hexa(unsigned long long n, int is_lowcase)
 {
 	int		i;
 	char	*ret_string;
